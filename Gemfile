@@ -3,7 +3,15 @@ source 'http://rubygems.org'
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.beta4'
-gem 'pg'
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem "mysql2", "~> 0.4.4"
+end
+gem 'arel', '6.0.0.beta2'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
